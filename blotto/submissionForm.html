@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blotto Submission Page</title>
+    </head>
+    <body>
+		<h2>Blotto Fall 2018, Round 0</h2>
+		<form action="https://docs.google.com/forms/d/e/1FAIpQLSdNIdooS7eJyeyofcZwU89J0S6WhyNkdSQCArfzjrO731zuVA/formResponse">
+		  <div>
+		    <label for="name">Name:</label>
+		    <input onchange = "runValidation();" name="entry.165791010" id="name">
+		  </div>
+		  <div>
+		    <label for="f1">Field 1:</label>
+		    <input onchange = "runValidation();" name="entry.2042295112" id="f1">
+		  </div>
+		  <div>
+		    <label for="f2">Field 2:</label>
+		    <input onchange = "runValidation();" name="entry.1876184192" id="f2">
+		  </div>
+		  <div>
+		    <label for="f3">Field 3:</label>
+		    <input onchange = "runValidation();" name="entry.1354152194" id="f3">
+		  </div>
+		  <div>
+		    <label for="f4">Field 4:</label>
+		    <input onchange = "runValidation();" name="entry.381838642" id="f4">
+		  </div>
+		  <div>
+		    <label for="f5">Field 5:</label>
+		    <input onchange = "runValidation();" name="entry.882863426" id="f5">
+		  </div>
+		  <div>
+		    <button id = "submissionbtn" disabled = "true">Submit!</button>
+		  </div>
+		  <div>
+			  <h3>Rules (red = requirement not satisfied):</h3>
+			  <ul id = "rules">
+				  <li id = "soldierCount" style = "color:red;">Exactly 100 soldiers</li>
+				  <li id = "fieldValidity" style = "color:red;">Field entries must be nonnegative integers</li>
+				  <li id = "fieldOrder" style = "color:red;">Entries must be nonincreasing from fields 1-5</li>
+			  </ul>
+			  
+			  <h3>Scoring:</h3>
+			  <ul>
+			  	<li>Highest average score in the round-robin tournament wins the round.</li>
+				<li>1 point per field win, 0.5 points per field tie.</li>
+				<!-- <li></li> -->
+			  </ul>
+		  </div>
+		</form>
+	
+		<script src = "blottoEntryValidation.js"></script>
+    </body>
+</html>
