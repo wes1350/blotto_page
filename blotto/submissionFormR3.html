@@ -4,7 +4,84 @@
         <title>Blotto Submission Page</title>
     </head>
     <body>
-		<h2>Blotto Fall 2018, Round 3</h2>
-		<h4>Coming Soon!</h4>
+		<h2>Blotto Fall 2018, Round 3: Transportation Costs</h2>
+		<form action="">
+		  <div>
+		    <label for="name">Name: </label>
+		    <input onchange = "runValidation(3);" name="" id="name">
+		  </div>
+		  <div>
+		    <label for="f1">Field 1:</label>
+		    <input onchange = "runValidation(3);" name="" id="f1">
+		  </div>
+		  <div>
+		    <label for="f2">Field 2:</label>
+		    <input onchange = "runValidation(3);" name="" id="f2">
+		  </div>
+		  <div>
+		    <label for="f3">Field 3:</label>
+		    <input onchange = "runValidation(3);" name="" id="f3">
+		  </div>
+		  <div>
+		    <label for="f4">Field 4:</label>
+		    <input onchange = "runValidation(3);" name="" id="f4">
+		  </div>
+		  <div>
+		    <label for="f5">Field 5:</label>
+		    <input onchange = "runValidation(3);" name="" id="f5">
+		  </div>
+		  <div>
+		    <label for="f6">Field 6:</label>
+		    <input onchange = "runValidation(3);" name="" id="f6">
+		  </div>
+		  <div>
+		    <label for="f7">Field 7:</label>
+		    <input onchange = "runValidation(3);" name="" id="f7">
+		  </div>
+		  <div>
+		    <label for="f8">Field 8:</label>
+		    <input onchange = "runValidation(3);" name="" id="f8">
+		  </div>
+		  <div>
+		    <label for="f9">Field 9:</label>
+		    <input onchange = "runValidation(3);" name="" id="f9">
+		  </div>
+		  <div>
+		    <label for="f10">Field 10:</label>
+		    <input onchange = "runValidation(3);" name="" id="f10">
+		  </div>
+		  <div>
+			  <h4 id = "fieldSum">Current sum: 0</h4>
+		  </div>
+		  <div>
+		    <button id = "submissionbtn" disabled = "true">Submit!</button>
+		  </div>
+		  <div>
+			  <h3>General Blotto Rules:</h3>
+			  <ul>
+			  	<li>Tournament structure is round-robin. Your entry will play every other entry once.</li>
+				<li>Your score for a round is your average score against the rest of the entries.</li>
+				<li>Win a field by having more soldiers on that field than your opponent.</li>
+				<li>You may submit multiple entries, but only your last one will count (make sure the names match).</li>
+			  </ul>
+			  	
+			  <h3>Submission Rules (red = requirement not satisfied):</h3>
+			  <ul id = "rules">
+				  <li id = "soldierCount" style = "color:red;">10 fields, exactly 100 soldiers</li>
+				  <li id = "fieldValidity" style = "color:red;">Field entries must be nonnegative integers</li>
+				  <li id = "fieldOrder" style = "color:red;">Entries must be nonincreasing from fields 1-10 (e.g. 40, 25, 15, 7, 4, 4, 3, 2, 0, 0)</li>
+			  </ul>
+			  
+			  <h3>Round Scoring:</h3>	  
+			  <ul>
+			  	<li>Each field is worth 3 points</li>
+				<li>Tying on a field awards half the points (3/2) to each player</li>
+				<li>Sending 0 soldiers to a field awards 0 points, even in ties, but costs 0 points</li>
+				<li><b>Sending 1 or more soldiers to a field costs 1 point</b>, but makes you eligible for earning points on that field</li>
+			  </ul>
+		  </div>
+		</form>
+	
+		<script src = "blottoEntryValidation.js"></script>
     </body>
 </html>

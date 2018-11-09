@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blotto 2017 R2 Results</title>
+    </head>
+    <body>
+		<img src = "results/results17/r2.png" width = "600"> <br /> <br />
+		<b>Structure/Rules:</b> <br />
+		<ul>
+		<li>7 battlefields, exactly 100 soldiers</li>
+		<li>If you win on battlefields 1-6, you get SQRT(# soldiers you put on that field) points</li>
+		<li>Battlefield 7 is worth double fields 1-6 (you get 2*SQRT(# soldiers) for winning)</li>
+		<li>If you tie, you get 0.5 * SQRT(# soldiers) [doubled for field 7]</li>
+		<li>Your entries on battlefields 1-6 must be non-increasing</li>
+		<li>Solider #s must be nonnegative integers from 0 to 100</li>
+		</ul>
+		<b>Examples of VALID submissions:</b> <br />
+		<ul>
+		<li>100,0,0,0,0,0,0 (7 nonnegative integers which sum to 100;   #1 >= #2 >= #3 >= #4 >=  #5 >= #6)</li> 
+		<li>25, 15, 10, 10, 5, 0, 35</li>
+		</ul>
+		<b>Examples of INVALID submissions:</b> <br />
+		<ul>
+		<li>99,0,0,0,0,0,0 or 101,0,0,0,0,0,0 (not exactly 100 soldiers)</li>
+		<li>45,45,5,1,1,1,1,1 (8 numbers, but only 7 battlefields exist)</li>
+		<li>50.5, 49, 0.5, 0, 0, 0, 0 (some entries are not nonnegative integers)</li>
+		<li>0, 1, 2, 3, 80, 4, 10 (On battlefields 1-6, # of soldiers is not non-increasing) </li>
+		</ul> 
+		
+		<b>Example match between 2 players A, B:</b> <br /> <br />	
+
+		A submits 15,14,14,14,14,14,15 <br />	
+		B submits 25, 25, 0, 0, 0, 0, 50 <br />	<br />	
+
+		A wins battlefields 3-6, winning SQRT(14) *  4 points. <br />	
+		B wins battlefields 1, 2, 7, winning SQRT(25)*2 + SQRT(50)*2 points. <br />	
+    </body>
+</html>

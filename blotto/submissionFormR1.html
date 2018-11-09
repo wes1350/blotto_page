@@ -4,7 +4,65 @@
         <title>Blotto Submission Page</title>
     </head>
     <body>
-		<h2>Blotto Fall 2018, Round 1</h2>
-		<h4>Coming Soon!</h4>
+		<h2>Blotto Fall 2018, Round 1: Scalability Costs</h2>
+		<form action="">
+		  <div>
+		    <label for="name">Name: </label>
+		    <input onchange = "runValidation(1);" name="" id="name">
+		  </div>
+		  <div>
+		    <label for="f1">Field 1:</label>
+		    <input onchange = "runValidation(1);" name="" id="f1">
+		  </div>
+		  <div>
+		    <label for="f2">Field 2:</label>
+		    <input onchange = "runValidation(1);" name="" id="f2">
+		  </div>
+		  <div>
+		    <label for="f3">Field 3:</label>
+		    <input onchange = "runValidation(1);" name="" id="f3">
+		  </div>
+		  <div>
+		    <label for="f4">Field 4:</label>
+		    <input onchange = "runValidation(1);" name="" id="f4">
+		  </div>
+		  <div>
+		    <label for="f5">Field 5:</label>
+		    <input onchange = "runValidation(1);" name="" id="f5">
+		  </div>
+		  <div>
+			  <h4 id = "fieldSum">Current sum: 0</h4>
+		  </div>
+		  <div>
+		    <button id = "submissionbtn" disabled = "true">Submit!</button>
+		  </div>
+		  <div>
+			  <h3>General Blotto Rules:</h3>
+			  <ul>
+			  	<li>Tournament structure is round-robin. Your entry will play every other entry once.</li>
+				<li>Your score for a round is your average score against the rest of the entries.</li>
+				<li>Win a field by having more soldiers on that field than your opponent.</li>
+				<li>You may submit multiple entries, but only your last one will count (make sure the names match).</li>
+			  </ul>
+			  	
+			  <h3>Submission Rules (red = requirement not satisfied):</h3>
+			  <ul id = "rules">
+				  <li id = "soldierCount" style = "color:red;">5 fields, UP TO 100 soldiers total (any number of soldiers from 0 to 100 is valid)</li>
+				  <li id = "fieldValidity" style = "color:red;">Field entries must be nonnegative integers</li>
+			  </ul>
+			  
+			  <h3>Round Scoring:</h3>	  
+			  <ul>
+			  	<li>Fields 1 - 5 are worth 20, 25, 30, 35, 40 points, respectively</li>
+				<li>Ties on a field award 1/2 of that field's value</li>
+				<li>First 50 soldiers are free</li>
+				<li>Next 25 soldiers cost 1/2 point each</li>
+				<li>Next 25 soldiers cost 1 point each</li>
+				<li><b>NOTE: YOU DO NOT HAVE TO USE ALL 100 SOLDIERS</b></li>
+			  </ul>
+		  </div>
+		</form>
+	
+		<script src = "blottoEntryValidation.js"></script>
     </body>
 </html>

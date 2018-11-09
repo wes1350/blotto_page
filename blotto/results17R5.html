@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blotto 2017 R5 Results</title>
+    </head>
+    <body>
+		<img src = "results/results17/r5.png" width = "600"> <br /> <br />
+		<b>Structure/Rules:</b> <br />
+		<ul>
+		<li>You can submit up to 3 entries. Submit all in the same google form!</li>
+		<li>100 soldiers, 7 fields</li>
+		<li>field N worth N+5 (field 1 worth 6, ... , field 7 worth 12)</li>
+		<li>ties split the points on a field</li>
+		<li>entries must be in non-increasing order, except for up to one increase (e.g. 25, 20, 10, 10, 30, 5, 0)</li>
+		</ul>
+		<b>Examples of VALID submissions:</b> <br />
+		<ul>
+		<li>50, 35, 10, 0, 0, 0, 5 (7 nonnegative integers, sum <= 100, no more than one increase)</li>
+		<li>17, 3, 3, 3, 40, 17, 17</li>
+		</ul>
+		<b>Examples of INVALID submissions:</b> <br />
+		<ul>
+		<li>0, 1, 2, 3, 4, 5, 85 (from left to right, entries increase more than once)</li>
+		<li>99,0,0,0,0,0,0 or 0,0,0,0,0,1,100 (more than 100 soldiers)</li>
+		<li>45,45,1,1,1,1,1,1 (8 numbers, but only 7 battlefields exist)</li>
+		<li>50.5, 49.5, 0, 0, 0, 0, 0 (some entries are not nonnegative integers)</li>
+		</ul> 
+		
+		<b>Example match between 2 players A, B:</b> <br /> <br />	
+
+		A submits 25, 25, 0, 50, 0, 0, 0 <br />
+		B submits 14, 14, 14, 14, 14, 14, 15 <br /> <br />
+
+		A wins battlefields 1-3, winning 6+7+8 = 21 points. B wins fields 4-7, winning 9+10+11+12 = 42 points. <br />	
+    </body>
+</html>

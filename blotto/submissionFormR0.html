@@ -4,31 +4,34 @@
         <title>Blotto Submission Page</title>
     </head>
     <body>
-		<h2>Blotto Fall 2018, Round 0</h2>
+		<h2>Blotto Fall 2018, Round 0: Basic Blotto</h2>
 		<form action="https://docs.google.com/forms/d/e/1FAIpQLSdNIdooS7eJyeyofcZwU89J0S6WhyNkdSQCArfzjrO731zuVA/formResponse">
 		  <div>
 		    <label for="name">Name: </label>
-		    <input onchange = "runValidation();" name="entry.165791010" id="name">
+		    <input onchange = "runValidation(0);" name="entry.165791010" id="name">
 		  </div>
 		  <div>
 		    <label for="f1">Field 1:</label>
-		    <input onchange = "runValidation();" name="entry.2042295112" id="f1">
+		    <input onchange = "runValidation(0);" name="entry.2042295112" id="f1">
 		  </div>
 		  <div>
 		    <label for="f2">Field 2:</label>
-		    <input onchange = "runValidation();" name="entry.1876184192" id="f2">
+		    <input onchange = "runValidation(0);" name="entry.1876184192" id="f2">
 		  </div>
 		  <div>
 		    <label for="f3">Field 3:</label>
-		    <input onchange = "runValidation();" name="entry.1354152194" id="f3">
+		    <input onchange = "runValidation(0);" name="entry.1354152194" id="f3">
 		  </div>
 		  <div>
 		    <label for="f4">Field 4:</label>
-		    <input onchange = "runValidation();" name="entry.381838642" id="f4">
+		    <input onchange = "runValidation(0);" name="entry.381838642" id="f4">
 		  </div>
 		  <div>
 		    <label for="f5">Field 5:</label>
-		    <input onchange = "runValidation();" name="entry.882863426" id="f5">
+		    <input onchange = "runValidation(0);" name="entry.882863426" id="f5">
+		  </div>
+		  <div>
+			  <h4 id = "fieldSum">Current sum: 0</h4>
 		  </div>
 		  <div>
 		    <button id = "submissionbtn" disabled = "true">Submit!</button>
@@ -42,19 +45,28 @@
 				<li>You may submit multiple entries, but only your last one will count (make sure the names match).</li>
 			  </ul>
 			  	
-			  <h3>Round 0 Rules (red = requirement not satisfied):</h3>
+			  <h3>Submission Rules (red = requirement not satisfied):</h3>
 			  <ul id = "rules">
-				  <li id = "soldierCount" style = "color:red;">5 fields, exactly 100 soldiers</li>
+				  <li id = "soldierCount" style = "color:red;">5 fields, exactly 100 soldiers total</li>
 				  <li id = "fieldValidity" style = "color:red;">Field entries must be nonnegative integers</li>
 				  <li id = "fieldOrder" style = "color:red;">Entries must be nonincreasing from fields 1-5 (e.g. 40, 25, 25, 7, 3)</li>
 			  </ul>
 			  
-			  <h3>Round 0 Scoring:</h3>	  
+			  <h3>Round Scoring:</h3>	  
 			  <ul>
 			  	<li>Each field is worth 1 point</li>
 				<li>Ties on a field award 1/2 point</li>
 				<!-- <li></li> -->
 			  </ul>
+			  
+			  <h3>Scoring Example:</h3>
+			  Ripka submits [30, 30, 20, 20, 0]. <br />
+			  Willie submits [20, 20, 20, 20, 20]. <br />
+			  
+			  Ripka wins fields 1 and 2, as he sent more soldiers to each than Willie. This earns Ripka 2 points. <br />
+			  Ripka and Willie tie on fields 3 and 4, as they both sent 20 soldiers. They earn 1/2 point for each field. <br />
+			  Willie wins field 5, as he sent more soldiers than Ripka. He earns 1 point for this. <br />
+			  In total, Ripka earns 3 points while Willie earns 2. 
 		  </div>
 		</form>
 	

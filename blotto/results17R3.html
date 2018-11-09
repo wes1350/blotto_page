@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blotto 2017 R3 Results</title>
+    </head>
+    <body>
+		<img src = "results/results17/r3.png" width = "600"> <br /> <br />
+		<b>Structure/Rules:</b> <br />
+		<ul>
+		<li>10 battlefields, up to 100 soldiers</li>
+		<li>Battlefield N is worth N points (#1 worth 1, #2 worth 2, etc.)</li>
+		<li>Ties on a field split the points of that field</li>
+		<li>Your submission must contain only either 1 or 2 unique nonnegative integers</li>
+		</ul>
+		<b>Examples of VALID submissions:</b> <br />
+		<ul>
+		<li>45, 0, 0, 0, 0, 0, 0, 0, 45, 0 (10 numbers, 2 unique nonnegative integers, sum &lt;= 100)</li>
+		<li>17,3,17,3,17,3,17,3,17,3</li>
+		<li>4, 4, 4, 4, 4, 16, 16, 16, 16, 16</li>
+		<li>10, 10, 10, 10, 10, 10, 10, 10, 10, 10</li>
+		</ul>
+		<b>Examples of INVALID submissions:</b> <br />
+		<ul>
+		<li>14, 14, 14, 14, 14, 7, 7, 7, 7, 2 (3 unique integers)</li>
+		<li>99,0,0,0,0,0,0,0,0,0 or 0,0,0,0,0,0,0,0,1,100 (not exactly 100 soldiers)</li>
+		<li>45,45,1,1,1,1,1,1,1,1,1,1 (12 numbers, but only 10 battlefields exist)</li>
+		<li>50.5, 49.5, 0, 0, 0, 0, 0, 0, 0, 0 (some entries are not nonnegative integers)</li>
+		</ul> 
+		
+		<b>Example match between 2 players A, B:</b> <br /> <br />	
+
+		A submits 0, 0, 0, 0, 0, 0, 0, 0, 50, 50 <br />
+		B submits 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 <br /> <br />
+
+		A wins battlefields 9-10, winning 9+10 = 19 points. <br />
+		B wins battlefields 1-8, winning 1+2+...+8 = 36 points. <br />
+
+    </body>
+</html>
