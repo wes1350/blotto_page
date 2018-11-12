@@ -5,33 +5,34 @@
     </head>
     <body>
 		<h2>Blotto Fall 2018, Round 1: Scalability Costs</h2>
-		<form action="">
+		<h3>Submissions due 5pm EST Wednesday, Nov. 14</h3>
+		<form action="https://docs.google.com/forms/d/e/1FAIpQLSee1dgrCTlhWLioXNEduHS2S_d3ZFZpeI-xiPeJDyf72kpCwA/formResponse">
 		  <div>
 		    <label for="name">Name: </label>
-		    <input onchange = "runValidation(1);" name="" id="name">
+		    <input onchange = "runValidation(1);" name="entry.165791010" id="name">
 		  </div>
 		  <div>
 		    <label for="f1">Field 1:</label>
-		    <input onchange = "runValidation(1);" name="" id="f1">
+		    <input onchange = "runValidation(1);" name="entry.2042295112" id="f1">
 		  </div>
 		  <div>
 		    <label for="f2">Field 2:</label>
-		    <input onchange = "runValidation(1);" name="" id="f2">
+		    <input onchange = "runValidation(1);" name="entry.1876184192" id="f2">
 		  </div>
 		  <div>
 		    <label for="f3">Field 3:</label>
-		    <input onchange = "runValidation(1);" name="" id="f3">
+		    <input onchange = "runValidation(1);" name="entry.1354152194" id="f3">
 		  </div>
 		  <div>
 		    <label for="f4">Field 4:</label>
-		    <input onchange = "runValidation(1);" name="" id="f4">
+		    <input onchange = "runValidation(1);" name="entry.381838642" id="f4">
 		  </div>
 		  <div>
 		    <label for="f5">Field 5:</label>
-		    <input onchange = "runValidation(1);" name="" id="f5">
+		    <input onchange = "runValidation(1);" name="entry.882863426" id="f5">
 		  </div>
 		  <div>
-			  <h4 id = "fieldSum">Current sum: 0</h4>
+			  <h4 id = "fieldSum">Remaining soldiers: 100</h4>
 		  </div>
 		  <div>
 		    <button id = "submissionbtn" disabled = "true">Submit!</button>
@@ -60,6 +61,17 @@
 				<li>Next 25 soldiers cost 1 point each</li>
 				<li><b>NOTE: YOU DO NOT HAVE TO USE ALL 100 SOLDIERS</b></li>
 			  </ul>
+			  
+			  <h3>Scoring Example:</h3>
+			  Ripka submits [30, 30, 20, 20, 0]. <br />
+			  Willie submits [10, 10, 0, 20, 30]. <br />
+			  
+			  Ripka wins fields 1, 2, and 3, as he sent more soldiers to each than Willie. This earns Ripka 20 + 25 + 30 = 75 points. <br />
+			  Ripka and Willie tie on field 4, as they both sent 20 soldiers. They earn 1/2 * 35 = 17.5 points each. <br />
+			  Willie wins field 5, as he sent more soldiers than Ripka. He earns 40 points for this. <br />
+			  However, since Ripka sent 100 soldiers, he pays 0.5 * 25 + 1 * 25 = 37.5 points as penalty. <br />
+			  Willie sent 70 soldiers, so he pays 0.5 * 20 = 10 points as penalty. <br />
+			  In total, Ripka scores 75 + 17.5 - 37.5 = 55 points, and Willie scores 17.5 + 40 - 10 = 47.5 points. 
 		  </div>
 		</form>
 	
