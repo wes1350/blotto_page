@@ -5,41 +5,42 @@
     </head>
     <body>
 		<h2>Blotto Fall 2018, Round 2: Win Harder</h2>
-		<form action="">
+		<h3>Submissions due 5pm EST Friday, Nov. 16</h3>
+		<form action="https://docs.google.com/forms/d/e/1FAIpQLScUhNQOlPYCGLuWg-Uey1nZNHV437s2B73FcLU8lYoWLFdQ_A/formResponse">
 		  <div>
 		    <label for="name">Name: </label>
-		    <input onchange = "runValidation(2);" name="" id="name">
+		    <input onchange = "runValidation(2);" name="entry.165791010" id="name">
 		  </div>
 		  <div>
 		    <label for="f1">Field 1:</label>
-		    <input onchange = "runValidation(2);" name="" id="f1">
+		    <input onchange = "runValidation(2);" name="entry.2042295112" id="f1">
 		  </div>
 		  <div>
 		    <label for="f2">Field 2:</label>
-		    <input onchange = "runValidation(2);" name="" id="f2">
+		    <input onchange = "runValidation(2);" name="entry.1876184192" id="f2">
 		  </div>
 		  <div>
 		    <label for="f3">Field 3:</label>
-		    <input onchange = "runValidation(2);" name="" id="f3">
+		    <input onchange = "runValidation(2);" name="entry.1354152194" id="f3">
 		  </div>
 		  <div>
 		    <label for="f4">Field 4:</label>
-		    <input onchange = "runValidation(2);" name="" id="f4">
+		    <input onchange = "runValidation(2);" name="entry.381838642" id="f4">
 		  </div>
 		  <div>
 		    <label for="f5">Field 5:</label>
-		    <input onchange = "runValidation(2);" name="" id="f5">
+		    <input onchange = "runValidation(2);" name="entry.882863426" id="f5">
 		  </div>
 		  <div>
 		    <label for="f6">Field 6:</label>
-		    <input onchange = "runValidation(2);" name="" id="f6">
+		    <input onchange = "runValidation(2);" name="entry.1625342666" id="f6">
 		  </div>
 		  <div>
 		    <label for="f7">Field 7:</label>
-		    <input onchange = "runValidation(2);" name="" id="f7">
+		    <input onchange = "runValidation(2);" name="entry.335231951" id="f7">
 		  </div>
 		  <div>
-			  <h4 id = "fieldSum">Current sum: 0</h4>
+			  <h4 id = "fieldSum">Remaining soldiers: 100</h4>
 		  </div>
 		  <div>
 		    <button id = "submissionbtn" disabled = "true">Submit!</button>
@@ -64,8 +65,18 @@
 			  <ul>
 			  	<li>Each field is worth 1 point</li>
 				<li>Ties on a field award 1/2 point</li>
-				<li><b>Your score for a round is the square of the number of points you earn (e.g. 3 wins, 2 ties = 4 points = 16 score)</b></li>
+				<li><b>Your score for a match is the square of the number of points you earn (e.g. 3 wins, 2 ties = 4 points = 16 score)</b></li>
 			  </ul>
+			  
+			  <h3>Scoring Example:</h3>
+			  Ripka submits [20, 20, 20, 20, 10, 10, 0]. <br />
+			  Willie submits [60, 25, 15, 0, 0, 0, 0]. <br />
+			  
+			  Willie wins fields 1 and 2, as he sent more soldiers to each. This earns him 2 points. <br />
+			  Ripka wins fields 3 to 6, as he sent more soldiers to each. He earns 4 points for this. <br />
+			  Willie and Ripka tie on field 7, so they both earn 0.5 points for this. <br />
+			  In total, Ripka earns 4.5 points while Willie earns 2.5. <br />
+			  As a result, Ripka's score is (4.5)^2 = 20.25, and Willie's score is (2.5)^2 = 6.25. 
 		  </div>
 		</form>
 	

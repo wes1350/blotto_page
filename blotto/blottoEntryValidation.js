@@ -266,7 +266,7 @@ function validateR2(){
 	
 	soldierSum = soldierNums.reduce((a, b) => a + b, 0);
 	
-	document.getElementById("fieldSum").innerHTML = "Current sum: " + soldierSum;
+	document.getElementById("fieldSum").innerHTML = "Remaining soldiers: " + (100 - soldierSum);
 	
 	if(soldierSum != 100){
 		console.log("FAILED SOLDIER SUM CHECK!");
@@ -363,7 +363,7 @@ function validateR3(){
 	
 	soldierSum = soldierNums.reduce((a, b) => a + b, 0);
 	
-	document.getElementById("fieldSum").innerHTML = "Current sum: " + soldierSum;
+	document.getElementById("fieldSum").innerHTML = "Remaining soldiers: " + (100 - soldierSum);
 	
 	if(soldierSum != 100){
 		console.log("FAILED SOLDIER SUM CHECK!");
@@ -459,7 +459,7 @@ function validateR4(){
 	
 	soldierSum = soldierNums.reduce((a, b) => a + b, 0);
 	
-	document.getElementById("fieldSum").innerHTML = "Current sum: " + soldierSum;
+	document.getElementById("fieldSum").innerHTML = "Remaining soldiers: " + (100 - soldierSum);
 	
 	if(soldierSum != 100){
 		console.log("FAILED SOLDIER SUM CHECK!");
