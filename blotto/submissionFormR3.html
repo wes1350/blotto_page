@@ -5,53 +5,54 @@
     </head>
     <body>
 		<h2>Blotto Fall 2018, Round 3: Transportation Costs</h2>
-		<form action="">
+		<h3>Submissions due 5pm EST Sunday, Nov. 18</h3>
+		<form action="https://docs.google.com/forms/d/e/1FAIpQLSd1w6DzoCE_sv8lF_8wx6mLd6xoK9GppeFYraC4f5RjsZECAw/formResponse">
 		  <div>
 		    <label for="name">Name: </label>
-		    <input onchange = "runValidation(3);" name="" id="name">
+		    <input onchange = "runValidation(3);" name="entry.165791010" id="name">
 		  </div>
 		  <div>
 		    <label for="f1">Field 1:</label>
-		    <input onchange = "runValidation(3);" name="" id="f1">
+		    <input onchange = "runValidation(3);" name="entry.2042295112" id="f1">
 		  </div>
 		  <div>
 		    <label for="f2">Field 2:</label>
-		    <input onchange = "runValidation(3);" name="" id="f2">
+		    <input onchange = "runValidation(3);" name="entry.1876184192" id="f2">
 		  </div>
 		  <div>
 		    <label for="f3">Field 3:</label>
-		    <input onchange = "runValidation(3);" name="" id="f3">
+		    <input onchange = "runValidation(3);" name="entry.1354152194" id="f3">
 		  </div>
 		  <div>
 		    <label for="f4">Field 4:</label>
-		    <input onchange = "runValidation(3);" name="" id="f4">
+		    <input onchange = "runValidation(3);" name="entry.381838642" id="f4">
 		  </div>
 		  <div>
 		    <label for="f5">Field 5:</label>
-		    <input onchange = "runValidation(3);" name="" id="f5">
+		    <input onchange = "runValidation(3);" name="entry.882863426" id="f5">
 		  </div>
 		  <div>
 		    <label for="f6">Field 6:</label>
-		    <input onchange = "runValidation(3);" name="" id="f6">
+		    <input onchange = "runValidation(3);" name="entry.1625342666" id="f6">
 		  </div>
 		  <div>
 		    <label for="f7">Field 7:</label>
-		    <input onchange = "runValidation(3);" name="" id="f7">
+		    <input onchange = "runValidation(3);" name="entry.335231951" id="f7">
 		  </div>
 		  <div>
 		    <label for="f8">Field 8:</label>
-		    <input onchange = "runValidation(3);" name="" id="f8">
+		    <input onchange = "runValidation(3);" name="entry.1142406803" id="f8">
 		  </div>
 		  <div>
 		    <label for="f9">Field 9:</label>
-		    <input onchange = "runValidation(3);" name="" id="f9">
+		    <input onchange = "runValidation(3);" name="entry.336587339" id="f9">
 		  </div>
 		  <div>
 		    <label for="f10">Field 10:</label>
-		    <input onchange = "runValidation(3);" name="" id="f10">
+		    <input onchange = "runValidation(3);" name="entry.1774447024" id="f10">
 		  </div>
 		  <div>
-			  <h4 id = "fieldSum">Current sum: 0</h4>
+			  <h4 id = "fieldSum">Remaining soldiers: 100</h4>
 		  </div>
 		  <div>
 		    <button id = "submissionbtn" disabled = "true">Submit!</button>
@@ -79,6 +80,17 @@
 				<li>Sending 0 soldiers to a field awards 0 points, even in ties, but costs 0 points</li>
 				<li><b>Sending 1 or more soldiers to a field costs 1 point</b>, but makes you eligible for earning points on that field</li>
 			  </ul>
+			  
+			  <h3>Scoring Example:</h3>
+			  Ripka submits [20, 10, 10, 10, 10, 10, 10, 10, 10, 0]. <br />
+			  Willie submits [60, 30, 10, 0, 0, 0, 0, 0, 0, 0, 0]. <br />
+			  
+			  Willie wins fields 1 and 2, as he sent more soldiers to each. This earns him 6 points. <br />
+			  Ripka and Willie tie on field 3, so they both earn 1.5 points for this. <br />
+			  Ripka wins fields 4-9 amd earns 18 points as a result. <br />
+			  Ripka and Willie, as they both sent 0 soldiers to field 10, both earn 0 points for field 10. <br />
+			  Since Ripka sent soldiers to 9 fields, he pays 9 points in penalty. Similarly, Willie pays 3 points in penalty. <br />
+			  In total, Ripka's score is 1.5 + 18 - 9 = 10.5, and Willie's score is 6 + 1.5 - 3 = 4.5.
 		  </div>
 		</form>
 	
