@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blotto R3 Results</title>
+    </head>
+    <body>
+		
+	  <img src = "results/results18/resultsR3.png" width = "600"> <br /> <br />
+		
+	  <h3>Submission Rules (red = requirement not satisfied):</h3>
+	  <ul id = "rules">
+		  <li id = "soldierCount" style = "color:red;">10 fields, exactly 100 soldiers</li>
+		  <li id = "fieldValidity" style = "color:red;">Field entries must be nonnegative integers</li>
+		  <li id = "fieldOrder" style = "color:red;">Entries must be nonincreasing from fields 1-10 (e.g. 40, 25, 15, 7, 4, 4, 3, 2, 0, 0)</li>
+	  </ul>
+	  
+	  <h3>Round Scoring:</h3>	  
+	  <ul>
+	  	<li>Each field is worth 3 points</li>
+		<li>Tying on a field awards half the points (3/2) to each player</li>
+		<li>Sending 0 soldiers to a field awards 0 points, even in ties, but costs 0 points</li>
+		<li><b>Sending 1 or more soldiers to a field costs 1 point</b>, but makes you eligible for earning points on that field</li>
+	  </ul>
+	  
+	  <h3>Scoring Example:</h3>
+	  Ripka submits [20, 10, 10, 10, 10, 10, 10, 10, 10, 0]. <br />
+	  Willie submits [60, 30, 10, 0, 0, 0, 0, 0, 0, 0, 0]. <br />
+	  
+	  Willie wins fields 1 and 2, as he sent more soldiers to each. This earns him 6 points. <br />
+	  Ripka and Willie tie on field 3, so they both earn 1.5 points for this. <br />
+	  Ripka wins fields 4-9 amd earns 18 points as a result. <br />
+	  Ripka and Willie, as they both sent 0 soldiers to field 10, both earn 0 points for field 10. <br />
+	  Since Ripka sent soldiers to 9 fields, he pays 9 points in penalty. Similarly, Willie pays 3 points in penalty. <br />
+	  In total, Ripka's score is 1.5 + 18 - 9 = 10.5, and Willie's score is 6 + 1.5 - 3 = 4.5.
+	  
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blotto R4 Results</title>
+    </head>
+    <body>
+		
+	  <!-- <img src = "results/results18/resultsR4.png" width = "600"> <br /> <br /> -->
+	  Coming soon!
+	  
+	  <h3>Submission Rules (red = requirement not satisfied):</h3>
+	  <ul id = "rules">
+		  <li id = "soldierCount" style = "color:red;">6 fields, exactly 100 soldiers</li>
+		  <li id = "fieldValidity" style = "color:red;">Field entries must be nonnegative integers</li>
+	  </ul>
+	  
+	  <h3>Round Scoring:</h3>	  
+	  <ul>
+	  	<li>Fields 1-6 are worth 5, 6, 7, 8, 9, 10, respectively</li>
+		<li>Tying on a field awards half the points to each player</li>
+		<li><b>Soldiers "defect" when outnumbered heavily!</b> The fields are evaluated in order, left to right. If your opponent sends at least 2x as many soldiers to a field than you, they win that field and 1/2 (rounded down) of the soldiers you sent there defect to your opponent, adding to their soldier count on the next field. Does not apply to field 6.</li>
+	  </ul>
+	  <h3>Scoring Example:</h3>
+	  Ripka submits [60, 20, 10, 0, 10, 0]. <br />
+	  Willie submits [30, 10, 10, 10, 10, 30]. <br /> <br />
+	  
+	  On field 1, Ripka wins, earning 5 points. <br />
+	  Also, since he has twice as many soldiers on field 1, half of Willie's 30 soldiers on field 1 now fight for Ripka on field 2. <br />
+	  On field 2, Ripka now has 35 soldiers. He again beats Willie, and earns 6 points. <br />
+	  Since he again had at least twice as many soldiers, half of Wilie's 10 soldiers on field 2 fight for Ripka on field 3. <br />
+	  On field 3, Ripka has 15 soldiers, and beats Willie, earning 7 points. <br /> 
+	  Since he did not send twice as many soldiers as Wilie, no soldiers of Willie's defect. <br />
+	  On field 4, Willie wins and gets 8 points. He doesn't gain any soldiers for field 5 though, since Ripka sent 0. <br />
+	  On field 5, they tie, and earn 4.5 points each. <br />
+	  On field 6, Willie wins outright and earns 10 points. <br />
+	  In total, Ripka's score is 5+6+7+4.5 = 22.5, and Willie's score is 8 + 4.5 + 10 = 22.5.
+	  
+    </body>
+</html>
