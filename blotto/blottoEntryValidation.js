@@ -478,3 +478,114 @@ function validateR4(){
 	
 	return passChecks;
 }
+
+/*
+* Conditions:
+* 7 fields worth 5-5-5-5-10-10-15
+* soldiers nonincreasing within 1-4, 5-6, 100 soldiers
+* pay sqrt(soldiers sent) penalty on each field
+*/
+function validateR5(){
+	
+	passChecks = true;
+	
+	// Name Check
+	if(typeof document.getElementById("name").value != "string" || document.getElementById("name").value == ""){
+		console.log("NAME IS EMPTY OR NOT A STRING!");
+		passChecks = false;
+	}
+	
+	// Soldier Check
+	
+	validFields = true;
+	numFields = 7;
+	soldierNums = [];
+	for(i = 1; i <= numFields; i++){
+		
+		// refuse blank entries
+		if(document.getElementById("f" + i).value == ""){
+			console.log("FAILED EMPTINESS CHECK!");
+			validFields = false; 
+		} 
+		
+		entry = Number(document.getElementById("f" + i).value);
+		
+		if(typeof entry == "number"){
+			if(!Number.isInteger(entry) || entry < 0){
+				console.log("FAILED INTEGER OR NEGATIVE CHECKS!");
+				validFields = false;
+			}
+			soldierNums.push(entry);
+		}
+		else{
+			console.log("FAILED NUMBER CHECK!");
+			validFields = false;
+		}
+	}
+	
+	if (validFields){
+		document.getElementById("fieldValidity").style.color = "#000000";
+	}
+	else{
+		document.getElementById("fieldValidity").style.color = "#FF0000";
+	}
+	passChecks = passChecks && validFields;
+	
+	
+	// Check number of soldiers
+	
+	
+	soldierSum = soldierNums.reduce((a, b) => a + b, 0);
+	
+	document.getElementById("fieldSum").innerHTML = "Remaining soldiers: " + (100 - soldierSum);
+	
+	if(soldierSum != 100){
+		console.log("FAILED SOLDIER SUM CHECK!");
+		passChecks = false; 
+		document.getElementById("soldierCount").style.color = "#FF0000";
+	}
+	else{
+		document.getElementById("soldierCount").style.color = "#000000";
+	}
+	
+	// Check nonincreasing soldier condition
+	if(validFields){	
+		bothValid = true;
+		for(i = 0; i < 3; i++){
+			console.log(soldierNums[i], i);
+			if (soldierNums[i+1] > soldierNums[i]){
+				bothValid = false;
+				console.log("FAILED NONINCREASING CHECK!");
+				passChecks = false;
+				document.getElementById("fieldOrder").style.color = "#FF0000";
+				break;
+			}
+		}
+		
+		for(i = 4; i < 5; i++){
+			console.log(soldierNums[i], i);
+			if (soldierNums[i+1] > soldierNums[i]){
+				bothValid = false;
+				console.log("FAILED NONINCREASING CHECK!");
+				passChecks = false;
+				document.getElementById("fieldOrder").style.color = "#FF0000";
+				break;
+			}
+		// set black if all good
+		if(bothValid){
+			document.getElementById("fieldOrder").style.color = "#000000";
+		}
+		
+		}
+	}
+	else{
+		document.getElementById("fieldOrder").style.color = "#FF0000";
+	}
+		
+	if (passChecks){
+		// passed all the checks!
+		console.log("PASSED ALL CHECKS!");
+	}
+	
+	return passChecks;
+}

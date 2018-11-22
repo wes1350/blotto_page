@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blotto R5 Results</title>
+    </head>
+    <body>
+		
+	  <!-- <img src = "results/results18/resultsR5.png" width = "600"> <br /> <br /> -->
+	  Coming soon!
+	  
+	  <h3>Submission Rules (red = requirement not satisfied):</h3>
+	  <ul id = "rules">
+		  <li id = "soldierCount" style = "color:red;">7 fields, exactly 100 soldiers</li>
+		  <li id = "fieldValidity" style = "color:red;">Field entries must be nonnegative integers</li>
+		  <li id = "fieldOrder" style = "color:red;">Entries must be nonincreasing from fields 1-4 and 5-6 (e.g. {25, 10, 10, 5}, {15, 15}, 20)</li>
+	  </ul>
+	  
+	  <h3>Round Scoring:</h3>	  
+	  <ul>
+	  	<li>Fields 1-7 worth {4, 4, 4, 4, 7, 7, 10} points, respectively</li>
+		<li>Ties on a field award 1/2 of the field value</li>
+		<li><b>You pay SQRT(# soldiers sent) penalty on each field</b></li>
+	  </ul>
+	  
+	  <h3>Scoring Example:</h3>
+	  Ripka submits [16, 16, 16, 16, 9, 9, 18]. <br />
+	  Willie submits [25, 16, 9, 4, 36, 1, 9]. <br />
+	  
+	  Willie wins field 1, winning 4 points. <br />
+	  They tie on field 2, winning 2 points each.<br />
+	  Ripka wins fields 3 and 4, winning 8 points. <br />
+	  Willie wins field 5, winning 7 points. <br />
+	  Ripka wins field 6, winning 7 points. <br />
+	  Ripka also wins field 7, winning 10 points. <br /> <br />
+	   
+	  However, Ripka pays penalty for each field, totaling [sqrt(16)*4 + sqrt(9)*2 + sqrt(18) ~ 24.24.] <br />
+	  Similarly, Willie ends up paying in 24 points penalty. <br />
+	  In total, Ripka scores 2 + 8 + 7 + 10 - 24.24 ~ 2.76 points, while Willie scores 5 + 2 + 7 - 24 = -10 points.
+	  
+    </body>
+</html>
